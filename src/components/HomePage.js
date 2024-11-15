@@ -78,7 +78,7 @@ const HomePage = () => {
                 alt="Check PNR"
                 className="icon"
               />
-              Check PNR Status
+              Check PNR Status now added
             </label>
           </div>
           <div className="option">
