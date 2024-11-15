@@ -1,0 +1,59 @@
+/* src/components/TrainDetailsPage.css */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.details {
+  margin-bottom: 20px;
+}
+
+.details p {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.train-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.train-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.train-card h4 {
+  margin-bottom: 10px;
+  color: #0056b3;
+}
+
+.train-card p {
+  margin: 5px 0;
+}
+
+.train-card button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.train-card button:hover {
+  background-color: #004080;
+}

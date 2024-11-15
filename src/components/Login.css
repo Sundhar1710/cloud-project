@@ -1,0 +1,125 @@
+/* CSS Variables for easier customization */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #28a745;
+  --bg-color: #f9f9f9;
+  --border-color: #ddd;
+  --text-color: #333;
+  --font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Main login container */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+  transform: scale(1.02);
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+/* Input fields styling */
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Sign-up link styling */
+.signup-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.signup-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 8px;
+  }
+
+  button {
+    padding: 10px;
+  }
+}

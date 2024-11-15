@@ -1,0 +1,35 @@
+/* src/components/PaymentSuccessPage.css */
+.success-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+  color: green;
+  font-weight: bold;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+.pop-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.pnr-container {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.pnr-number {
+  font-size: 24px;
+  color: #007bff;
+  font-weight: bold;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  word-wrap: break-word;
+}

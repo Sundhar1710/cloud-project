@@ -1,0 +1,120 @@
+/* Basic styling for body and page structure */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh; /* Ensure body takes full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: whitesmoke;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  padding-right: 30px; /* Add some space on the right */
+}
+
+.nav-links {
+  list-style: none;
+  padding-right: 50px;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+  height: calc(100vh - 80px); /* Take full height minus navbar height */
+  margin-top: 80px; /* Space to prevent navbar overlap */
+  padding: 20px; /* Add some padding for spacing */
+}
+
+/* Title Styling */
+.content .title {
+  margin-bottom: 20px;
+  text-align: left; /* Align title to the left */
+  padding-left: 20px; /* Add some left padding */
+}
+
+h1 {
+  font-size: 2em;
+  color: #007bff;
+}
+
+/* Option box styling */
+.option {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, border-color 0.3s;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+}
+
+/* Label and icon styling */
+.option label {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Radio input styling */
+input[type="radio"] {
+  display: none; /* Hide the default radio button */
+}
+
+/* Styling for the "Upcoming" tag */
+.upcoming-tag {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  background-color: #7e1aa1; /* Purple color for the tag */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+  z-index: 1;
+}

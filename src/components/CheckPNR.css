@@ -1,0 +1,60 @@
+/* src/components/CheckPNR.css */
+.check-pnr-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.check-pnr-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.pnr-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pnr-form input {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.pnr-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pnr-form button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.pnr-status {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.pnr-status p {
+  margin: 5px 0;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
