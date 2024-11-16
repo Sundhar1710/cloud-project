@@ -40,68 +40,64 @@ const HomePage = () => {
       </div>
 
       {/* Content Section */}
-      <div className="content">
-        <div className="title">
-          <h1>Tick the Ticket</h1>
+
+      <form id="serviceForm">
+        <div className="option">
+          <input
+            type="radio"
+            id="bookTicket"
+            name="service"
+            value="bookTicket"
+            checked={selectedService === "bookTicket"}
+            onChange={handleServiceSelection}
+          />
+          <label htmlFor="bookTicket">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/book_ticket.png`}
+              alt="Book Ticket"
+              className="icon"
+            />
+            Book Train Ticket
+          </label>
         </div>
-        <form id="serviceForm">
-          <div className="option">
-            <input
-              type="radio"
-              id="bookTicket"
-              name="service"
-              value="bookTicket"
-              checked={selectedService === "bookTicket"}
-              onChange={handleServiceSelection}
+        <div className="option">
+          <input
+            type="radio"
+            id="checkPNR"
+            name="service"
+            value="checkPNR"
+            checked={selectedService === "checkPNR"}
+            onChange={handleServiceSelection}
+          />
+          <label htmlFor="checkPNR">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/check_pnr.png`}
+              alt="Check PNR"
+              className="icon"
             />
-            <label htmlFor="bookTicket">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/book_ticket.png`}
-                alt="Book Ticket"
-                className="icon"
-              />
-              Book Train Ticket
-            </label>
-          </div>
-          <div className="option">
-            <input
-              type="radio"
-              id="checkPNR"
-              name="service"
-              value="checkPNR"
-              checked={selectedService === "checkPNR"}
-              onChange={handleServiceSelection}
+            Check PNR Status
+          </label>
+        </div>
+        <div className="option">
+          <input
+            type="radio"
+            id="liveTrainStatus"
+            name="service"
+            value="liveTrainStatus"
+            checked={selectedService === "liveTrainStatus"}
+            onChange={handleServiceSelection}
+          />
+          <label htmlFor="liveTrainStatus">
+            <span className="upcoming-tag">Upcoming</span>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/live_train_status.png`}
+              alt="Live Train Status"
+              className="icon"
             />
-            <label htmlFor="checkPNR">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/check_pnr.png`}
-                alt="Check PNR"
-                className="icon"
-              />
-              Check PNR Status
-            </label>
-          </div>
-          <div className="option">
-            <input
-              type="radio"
-              id="liveTrainStatus"
-              name="service"
-              value="liveTrainStatus"
-              checked={selectedService === "liveTrainStatus"}
-              onChange={handleServiceSelection}
-            />
-            <label htmlFor="liveTrainStatus">
-              <span className="upcoming-tag">Upcoming</span>
-              <img
-                src={`${process.env.PUBLIC_URL}/images/live_train_status.png`}
-                alt="Live Train Status"
-                className="icon"
-              />
-              Live Train Status
-            </label>
-          </div>
-        </form>
-      </div>
+            Live Train Status
+          </label>
+        </div>
+      </form>
     </>
   );
 };

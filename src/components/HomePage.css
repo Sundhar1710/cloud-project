@@ -2,9 +2,11 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  height: 100vh; /* Ensure body takes full viewport height */
+  height: 100vh; /* Full viewport height */
   display: flex;
-  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #f8f9fa; /* Light background */
 }
 
 /* Navigation Bar */
@@ -18,8 +20,8 @@ body {
   z-index: 10;
   width: 100%;
   display: flex;
-  justify-content: flex-end; /* Align to the right */
-  padding-right: 30px; /* Add some space on the right */
+  justify-content: flex-end;
+  padding-right: 30px;
 }
 
 .nav-links {
@@ -43,78 +45,90 @@ body {
   color: #007bff;
 }
 
-/* Content Section */
-.content {
+/* Centered container for the outer box */
+#serviceForm {
+  width: 450px; /* Fixed width for the box */
+  padding: 30px; /* Outer padding for the box */
+  border: 2px solid #ddd; /* Border around the box */
+  border-radius: 8px;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
   flex-direction: column;
-  height: calc(100vh - 80px); /* Take full height minus navbar height */
-  margin-top: 80px; /* Space to prevent navbar overlap */
-  padding: 20px; /* Add some padding for spacing */
+  gap: 25px; /* Space between buttons */
+  align-items: center; /* Center buttons horizontally within the box */
 }
 
-/* Title Styling */
-.content .title {
-  margin-bottom: 20px;
-  text-align: left; /* Align title to the left */
-  padding-left: 20px; /* Add some left padding */
-}
-
-h1 {
-  font-size: 2em;
-  color: #007bff;
-}
-
-/* Option box styling */
+/* Individual option styling */
 .option {
-  margin-bottom: 15px;
-  padding: 15px;
+  width: 100%; /* Full width of the parent box */
+  padding: 20px; /* Inner padding for the option box */
   border: 2px solid #ddd;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, border-color 0.3s;
   display: flex;
+  position: relative;
   align-items: center;
+  gap: 15px; /* Space between image and text */
   cursor: pointer;
+  position: relative;
+  transition: transform 0.3s, border-color 0.3s;
 }
 
+/* Add ">" symbol to the right corner */
+.option::after {
+  content: ">";
+  position: absolute;
+  right: 20px; /* Distance from the right edge */
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff; /* Blue color for the symbol */
+  transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover effect for the option */
 .option:hover {
   transform: scale(1.05);
   border-color: #007bff;
 }
 
-/* Label and icon styling */
-.option label {
-  margin-left: 10px;
-  font-weight: bold;
-  color: #333;
-  display: flex;
-  align-items: center;
-  position: relative;
+.option:hover::after {
+  color: #0056b3; /* Darker blue on hover */
 }
 
+/* Styling for the image/icon */
 .icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-
-/* Radio input styling */
-input[type="radio"] {
-  display: none; /* Hide the default radio button */
+  width: 60px;
+  height: 60px;
+  margin-right: 15px; /* Space between image and text */
+  position: relative;
 }
 
 /* Styling for the "Upcoming" tag */
 .upcoming-tag {
   position: absolute;
-  top: -10px;
-  left: 0;
-  background-color: #7e1aa1; /* Purple color for the tag */
+  top: -15px; /* Place above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7e1aa1; /* Purple tag background */
   color: white;
   font-size: 12px;
   font-weight: bold;
-  padding: 2px 6px;
+  padding: 3px 8px;
   border-radius: 4px;
   z-index: 1;
+}
+
+/* Styling for label text */
+.option label {
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  flex-direction: column; /* Aligns text below the "Upcoming" tag */
+}
+
+/* Hide the radio button inputs */
+input[type="radio"] {
+  display: none;
 }
